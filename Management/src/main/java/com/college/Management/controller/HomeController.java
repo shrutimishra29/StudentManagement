@@ -21,8 +21,8 @@ public class HomeController {
         return "faq";
     }
 
-//    @RequestMapping("/error")
-//    public String error(){
-//     return "error";
-//    }
+    @RequestMapping("/contact")
+    public String contact(){
+        return "contact";
+    }
 }
