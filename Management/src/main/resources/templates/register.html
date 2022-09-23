@@ -1,61 +1,41 @@
 <!DOCTYPE html>
-<!doctype html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.thymeleaf.org ">
+<html lang="en">
 <style>
-    html,
-    body {
-        margin: 0;
-        height: 100%;
-    }
+html, body {
+	margin: 0;
+	height: 100%;
+}
 
-    /*
+/*
     img {
         display: block;
         width: 100%;
         height: 100%;
         object-fit: cover;
     } */
-    .bgim {
-        background-image:
-            url("https://images.unsplash.com/photo-1517524285303-d6fc683dddf8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80https://images.unsplash.com/photo-1517524285303-d6fc683dddf8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80");
-    }
+.bgim {
+	background-image:
+		url("https://img.freepik.com/free-photo/woman-asian-happy-her-using-computer-laptop-sitting-white-chair-drinking-coffee_74952-2147.jpg?w=1060&t=st=1663142237~exp=1663142837~hmac=92d1589ca4378fac6bfdabceee06079d6f5b3dc6b30dd8ed606a8694b0b2be0b");
+}
 
-    font {
-        color: #75C0E0;
-    }
-
-    .forms {
-        border-width: 5px;
-    }
-    .divider:after,
-.divider:before {
-content: "";
-flex: 1;
-height: 1px;
-background: #eee;
-}
-.h-custom {
-height: calc(100% - 73px);
-}
-@media (max-width: 450px) {
-.h-custom {
-height: 100%;
-}
+font {
+	color: #75C0E0;
 }
 </style>
 
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css'>
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
 
-    <title>Register User</title>
+    <title>Register New User</title>
 </head>
 
 <body>
@@ -63,126 +43,119 @@ height: 100%;
     <nav class="navbar bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="#"> <img
-                    src="https://th.bing.com/th/id/OIP.veoLa35WqhsKceD7ToxhLAAAAA?pid=ImgDet&rs=1" alt="Logo"
-                    width="30" height="24" class="d-inline-block align-text-top">
-                <!-- <h1>
-                Student Management App
-            </h1> -->
-                <font face="Verdana" size="6">&nbsp;
-                    Student Management</font><br /> <!-- </a> -->
+                    src="https://th.bing.com/th/id/OIP.veoLa35WqhsKceD7ToxhLAAAAA?pid=ImgDet&rs=1"
+                    alt="Logo" width="30" height="24"
+                    class="d-inline-block align-text-top"> <!-- <h1>
+                    Student Management App
+                </h1> --> <font face="Verdana" size="6">&nbsp;
+                Student Management</font><br /> <!-- </a> -->
             </a>
         </div>
     </nav>
 </div>
 
 <ul class="nav justify-content-end">
-    <!--    <li class="nav-item"><a class="nav-link active" href="login">Login</a>-->
-    <!--    </li>-->
-    <li class="nav-item"><a class="nav-link" href="contact">Sign
-        up</a></li>
-    <li class="nav-item"><a class="nav-link" href="about">About</a></li>
-    <li class="nav-item"><a class="nav-link" href="help">Help</a></li>
+    <li class="nav-item"><a class="nav-link active"
+                            aria-current="page" href="#">Register</a></li>
+    <li class="nav-item"><a class="nav-link" href="#">About us</a></li>
+    <li class="nav-item"><a class="nav-link" href="#">Help</a></li>
 </ul>
-<div class="bgim">
-    <br><br><br>
-    <section class="vh-90" >
-        <div class="container h-100">
-            <div class="row d-flex justify-content-center align-items-center h-100">
-                <div class="col-lg-12 col-xl-11">
-                    <div class="card text-black" style="border-radius: 25px;">
-                        <div class="card-body p-md-5">
-                            <div class="row justify-content-center">
-                                <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+<!--<div class="container mt-5">-->
+<!--    <font face="Verdana" size="5">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;-->
+<!--        &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;-->
+<!--        &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;-->
+<!--<section class="vh-100 bg-image"-->
+<!--         style="background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.webp');">-->
+<!--    <div class="mask d-flex align-items-center h-100 gradient-custom-3">-->
+<!--        <div class="container h-100">-->
+<!--            <div class="row d-flex justify-content-center align-items-center h-100">-->
+<!--                <div class="col-12 col-md-9 col-lg-7 col-xl-6">-->
+<!--                    <div class="card" style="border-radius: 15px;">-->
+<!--                        <div class="card-body p-5">-->
+<section class="vh-100">
+    <div class="container py-5 h-100">
+        <div class="row d-flex align-items-center justify-content-center h-100">
+            <div class="col-md-8 col-lg-7 col-xl-6">
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg"
+                     class="img-fluid" alt="Phone image">
+            </div>
+            <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
+        &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;<font face="Verdana" size="5">&nbsp; &nbsp; &nbsp;
+                &nbsp;
+                 <i>Register new User</i>
+            </font><br />
+    </font><br />
 
-                                    <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign up</p>
+    <form action="processform" method="post">
 
-                                    <form class="mx-1 mx-md-4">
+        <div class="form-group">
+            <label for="email">Email address</label> <input type="email"
+                                                            class="form-control" id="email" placeholder="Enter email"
+                                                            name="email" required>
+        </div>
 
-                                        <div class="d-flex flex-row align-items-center mb-4">
-                                            <i class="fas fa-user fa-lg me-3 fa-fw"></i>
-                                            <div class="form-outline flex-fill mb-0">
-                                                <label for="username">User Name</label> <input type="text"
-                                                                                               class="form-control" id="username" placeholder="Enter username"
-                                                                                               name="username" pattern="[A-Za-z0-9]+" required><small
-                                                    id="usernameHelp" class="form-text text-muted"> (letters
-                                                and numbers only, no punctuation or special characters) </small>
-                                            </div>
-                                        </div>
 
-                                        <div class="d-flex flex-row align-items-center mb-4">
-                                            <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
-                                            <div class="form-outline flex-fill mb-0">
-                                                <label for="email">Email address</label> <input type="email"
-                                                                                                class="form-control" id="email" placeholder="Enter email"
-                                                                                                name="email" required>
-                                            </div>
-                                        </div>
+        <div class="form-group">
+            <label for="username">User Name</label> <input type="text"
+                                                           class="form-control" id="username" placeholder="Enter username"
+                                                           name="username" pattern="[A-Za-z0-9]+" required><small
+                id="usernameHelp" class="form-text text-muted"> (letters
+            and numbers only, no punctuation or special characters) </small>
+        </div>
 
-                                        <div class="d-flex flex-row align-items-center mb-4">
-                                            <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
-                                            <div class="form-outline flex-fill mb-0">
-                                                <label for=password>Password</label> <input type="password"
-                                                                                            class="form-control" id="password" placeholder="Enter password"
-                                                                                            pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$"
-                                                                                            aria-describedby="passwordHelp" name="password" required> <small
-                                                    id="passwordHelp" class="form-text text-muted">Minimum
-                                                eight characters, at least one upper case English letter, one lower
-                                                case English letter, one number and one special character</small>
-                                            </div>
-                                        </div>
+        <div class="form-group">
+            <label for=password>Password</label> <input type="password"
+                                                        class="form-control" id="password" placeholder="Enter password"
+                                                        pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$"
+                                                        aria-describedby="passwordHelp" name="password" required> <small
+                id="passwordHelp" class="form-text text-muted">Minimum
+            eight characters, at least one upper case English letter, one lower
+            case English letter, one number and one special character</small>
+        </div>
 
-<!--                                        <div class="d-flex flex-row align-items-center mb-4">-->
-<!--                                            <i class="fas fa-key fa-lg me-3 fa-fw"></i>-->
-<!--                                            <div class="form-outline flex-fill mb-0">-->
-<!--                                                <input type="password" id="form3Example4cd" class="form-control" />-->
-<!--                                                <label class="form-label" for="form3Example4cd">Repeat your password</label>-->
-<!--                                            </div>-->
-<!--                                        </div>-->
+        <div class="container text-center">
 
-                                        <div class="form-check d-flex justify-content-center mb-5">
-                                            <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3c" />
-                                            <label class="form-check-label" for="form2Example3">
-                                                I agree all statements in <a href="#!">Terms of service</a>
-                                            </label>
-                                        </div>
+            <button type="submit" class="btn btn-primary">Sign up</button>
 
-                                        <a href="welcome">
-                                        <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                                            <button type="button" class="btn btn-primary btn-lg">Register</button>
-                                        </div>
-                                        </a>
-                                    </form>
 
-                                </div>
-                                <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
+        </div>
 
-                                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp"
-                                         class="img-fluid" alt="Sample image">
-
-                                </div>
-                            </div>
-                        </div>
+    </form>
+             <form action="login" class="text-center">
+             <p>
+             Already a member?
+                <button type="submit" class="btn btn-primary">Login</button>
+                           </p>
+                        </form>
+                      </div>
                     </div>
                 </div>
             </div>
         </div>
-</div>
-<!--    </div>-->
-<!--</div>-->
-<!-- Optional JavaScript< -->
+    </div>
+    </div>
+</section>
+
+
+
+
+
+<!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src=" https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous">
 
 </script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+<script
+        src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+<script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-<script>const exampleEl = document.getElementById('example')
-const popover = new bootstrap.Popover(exampleEl, options)</script>
+<!-- </div> -->
 </body>
 
 </html>
