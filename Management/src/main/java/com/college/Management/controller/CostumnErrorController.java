@@ -28,4 +28,7 @@ public class CostumnErrorController implements ErrorController{
     }
 
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> secondbranch
