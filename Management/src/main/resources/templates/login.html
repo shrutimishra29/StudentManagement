@@ -1,10 +1,220 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.thymeleaf.org ">
+<style>
+    html,
+    body {
+        margin: 0;
+        height: 100%;
+    }
 
+    /*
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    } */
+    .bgim {
+        background-image:
+            url("https://images.unsplash.com/photo-1517524285303-d6fc683dddf8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80https://images.unsplash.com/photo-1517524285303-d6fc683dddf8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80");
+    }
+
+    font {
+        color: #75C0E0;
+    }
+
+    .forms {
+        border-width: 5px;
+    }
+    .divider:after,
+.divider:before {
+content: "";
+flex: 1;
+height: 1px;
+background: #eee;
+}
+.h-custom {
+height: calc(100% - 73px);
+}
+@media (max-width: 450px) {
+.h-custom {
+height: 100%;
+}
+}
+</style>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css'>
+
+    <title>Welcome!</title>
+</head>
+
+<body>
+<div>
+    <nav class="navbar bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"> <img
+                    src="https://th.bing.com/th/id/OIP.veoLa35WqhsKceD7ToxhLAAAAA?pid=ImgDet&rs=1" alt="Logo"
+                    width="30" height="24" class="d-inline-block align-text-top">
+                <!-- <h1>
+                Student Management App
+            </h1> -->
+                <font face="Verdana" size="6">&nbsp;
+                    Student Management</font><br /> <!-- </a> -->
+            </a>
+        </div>
+    </nav>
+</div>
+
+<ul class="nav justify-content-end">
+<!--    <li class="nav-item"><a class="nav-link active" href="login">Login</a>-->
+<!--    </li>-->
+    <li class="nav-item"><a class="nav-link" href="contact">Sign
+        up</a></li>
+    <li class="nav-item"><a class="nav-link" href="about">About</a></li>
+    <li class="nav-item"><a class="nav-link" href="help">Help</a></li>
+</ul>
+<div class="bgim">
+    <br> <br> <br>
+    <div class="container " style="text-align: center;">
+        <div class="card" style="width: 70rem;">
+            <!-- <img src="..." class="card-img-top" alt="..."> -->
+            <div class="card-body">
+                <!-- Pills navs -->
+                <section class="vh-100">
+                    <div class="container-fluid h-custom">
+                        <div class="row d-flex justify-content-center align-items-center h-100">
+                            <div class="col-md-9 col-lg-6 col-xl-5">
+                                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
+                                     class="img-fluid" alt="Sample image">
+                            </div>
+                            <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+                                <form>
+                                    <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
+                                        <p class="lead fw-normal mb-0 me-3">Sign in with</p>
+                                        <button type="button" class="btn btn-primary btn-floating mx-1">
+                                            <i class="fi fi-brands-facebook"></i>
+                                        </button>
+                                        <a href="www.facebook.com">
+                                        <button type="button" class="btn btn-primary btn-floating mx-1">
+                                            <i class="fi fi-brands-twitter"></i>
+                                        </button>
+                                        </a>
+                                        <button type="button" class="btn btn-primary btn-floating mx-1">
+                                            <i class="fi fi-brands-linkedin"></i>
+                                        </button>
+                                    </div>
+
+                                    <div class="divider d-flex align-items-center my-4">
+                                        <p class="text-center fw-bold mx-3 mb-0">Or</p>
+                                    </div>
+
+                                    <!-- Email input -->
+<!--                                    <div class="form-outline mb-4">-->
+<!--                                        <input type="text" id="username" class="form-control form-control-lg"-->
+<!--                                               placeholder="Enter your username" name="username" required>-->
+<!--                                        <label class="form-label" for="username"></label>-->
+                                    <div class="form-group">
+                                        <label for="username"></label> <input type="text"
+                                                                                       class="form-control" id="username" placeholder="Enter here"
+                                                                                       name="username" aria-describedby="usernameHelp"
+                                                                                       pattern="[A-Za-z0-9]+" required> <small id="usernameHelp"
+                                                                                                                               class="form-text text-muted"> (letters and numbers only,
+                                        no punctuation or special characters) </small>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for=password></label> <input type="password"
+                                                                                    class="form-control" id="password" placeholder="Enter password"
+                                                                                    pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$"
+                                                                                    aria-describedby="passwordHelp" name="password" required>
+                                        <small id="passwordHelp" class="form-text text-muted">Minimum
+                                            eight characters, at least one upper case English letter, one
+                                            lower case English letter, one number and one special character</small>
+                                    </div>
+
+
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <!-- Checkbox -->
+                                        <div class="form-check mb-0">
+                                            <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" />
+                                            <label class="form-check-label" for="form2Example3">
+                                                Remember me
+                                            </label>
+                                        </div>
+                                        <a href="#!" class="text-body">Forgot password?</a>
+                                    </div>
+
+                                    <div class="text-center text-lg-start mt-4 pt-2">
+                                        <a href="/loggedin">
+                                        <button type="button" class="btn btn-primary btn-lg"
+                                                style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button>
+                                        </a>
+                                        <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="register"
+                                                                                                          class="link-danger">Register</a></p>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                            class="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 bg-primary">
+                        <!-- Copyright -->
+                        <div class="text-white mb-3 mb-md-0">
+                            Copyright © 2020. All rights reserved.
+                        </div>
+                        <!-- Copyright -->
+
+                        <!-- Right -->
+                        <div>
+                            <a href="#!" class="text-white me-4">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#!" class="text-white me-4">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#!" class="text-white me-4">
+                                <i class="fab fa-google"></i>
+                            </a>
+                            <a href="#!" class="text-white">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                        <!-- Right -->
+                    </div>
+                </section>
+                <!-- Pills content -->
+<!--                <br> <br> <br> <br> <br> <br> <br>-->
+<!--                <br> <br> <br> <br>-->
+            </div>
+        </div>
+
+    </div>
+</div>
+    <!-- Optional JavaScript< -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src=" https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    <script>const exampleEl = document.getElementById('example')
+const popover = new bootstrap.Popover(exampleEl, options)</script>
 </body>
+
 </html>
