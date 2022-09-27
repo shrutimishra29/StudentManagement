@@ -13,13 +13,13 @@ import org.hibernate.annotations.Parameter;
 @Table
 public class Student {
 
-//        @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "demo_sql")
-//    @GenericGenerator(name = "demo_sql", strategy = "com.example.Thymelead.entity.StringPrefixedSequenceGenerator", parameters = {
-//
-//            @Parameter(name = StringPrefixedSequenceGenerator.INCREMENT_PARAM, value = "1"),
-//            @Parameter(name = StringPrefixedSequenceGenerator.VALUE_PREFIX_PARAMETER, value = "Student_"),
-//            @Parameter(name = StringPrefixedSequenceGenerator.NUMBER_FORMAT_PARAMETER, value = "%05d"),
-//    })
+        @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "demo_sql")
+    @GenericGenerator(name = "demo_sql", strategy = "com.college.Management.entities.StringPrefixedSequenceGenerator", parameters = {
+
+            @Parameter(name = StringPrefixedSequenceGenerator.INCREMENT_PARAM, value = "1"),
+            @Parameter(name = StringPrefixedSequenceGenerator.VALUE_PREFIX_PARAMETER, value = "Student_"),
+            @Parameter(name = StringPrefixedSequenceGenerator.NUMBER_FORMAT_PARAMETER, value = "%05d"),
+    })
     @Id
     private String id;
     private String firstname;

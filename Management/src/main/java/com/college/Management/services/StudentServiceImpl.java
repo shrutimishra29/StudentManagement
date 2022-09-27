@@ -5,6 +5,8 @@ import com.college.Management.entities.Student;
 import com.college.Management.repos.StudentRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
 import java.util.List;
 @Service
 public class StudentServiceImpl implements StudentService{
@@ -48,6 +50,17 @@ public class StudentServiceImpl implements StudentService{
 
     }
 
+    public List<Student> getStudentByEmail(String email){
+        List<Student> students = studentRepository.findAll();
+        List<Student> student1 = new ArrayList<>();
+        for (Student student:
+            students ) {
+            if(student.getEmail() == email){
+                student1.add(student);
+            }
+        }
+        return student1;
+     }
     //    @Override
 //    public void getAlldates() {
 //        List<Student> students = (List<Student>) studentRepository.findAll();
