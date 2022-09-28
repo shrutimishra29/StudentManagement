@@ -104,7 +104,7 @@
                                 <label for="phone">Mobile number</label> <input type="number" class="form-control"
                                                                                 id="phone" placeholder="Enter phone number" name="phone"
                                                                                 oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
-                                                                                maxlength="10" required>
+                                                                                maxlength="10" pattern="^[6-9]\d{9}$" required>
                             </div>
 
                             </div>

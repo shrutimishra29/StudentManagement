@@ -3,6 +3,7 @@ package com.college.Management.controller;
 import com.college.Management.entities.Student;
 import com.college.Management.repos.StudentRepo;
 import com.college.Management.services.StudentServiceImpl;
+import com.sun.org.apache.xpath.internal.operations.Mod;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -11,8 +12,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
+import java.util.stream.Collectors;
 
 @Controller
 
@@ -90,5 +91,53 @@ public class StudentController {
     public String deleteStudent(@PathVariable String id) {
         impl.deleteStudentById(id);
         return "redirect:/showstudents";
+    }
+
+    @RequestMapping("graph")
+    public String graph(Model m){
+        List<Student> students = studentRepo.findAll();
+//        List<String> months = new ArrayList<>();
+        List<String> courses = new ArrayList<>();
+        courses.add("Java");
+        courses.add("Angular");
+        courses.add("C and C++");
+        courses.add(".NET");
+        Map<Map,Integer> all = new HashMap<>();
+
+        int javaCount=0;
+        int angularCount=0;
+        int ccount =0;
+        int netCount =0;
+        for(int i=0; i<students.size(); i++){
+           if(students.get(i).getCourse().equals("Java")){
+               javaCount++;
+           }
+            if(students.get(i).getCourse().equals("Angular")){
+                angularCount++;
+            }
+
+            if(students.get(i).getCourse().equals("C and C++")){
+                ccount++;
+            }
+
+            if(students.get(i).getCourse().equals(".NET")){
+                netCount++;
+            }
+        }
+//        int numbers[] = new int[4];
+        List<Integer> numbers = new ArrayList<>();
+        numbers.add(javaCount);
+        numbers.add(angularCount);
+        numbers.add(ccount);
+        numbers.add(netCount);
+        System.out.println("Java :" + javaCount + " Angular "+ angularCount + " .NET :" +netCount+ " C and C++ :" + ccount);
+//        m.addAttribute(courses);
+//        m.addAttribute(numbers);
+        List<String> courseList= courses.stream().collect(Collectors.toList());
+       // List<Integer> ageList = m.getAllEmployee().stream().map(x-> x.getAge()).collect(Collectors.toList());
+        List<Integer> numList = numbers.stream().collect(Collectors.toList());
+        m.addAttribute("courses", courseList);
+        m.addAttribute("count", numList);
+        return "graph";
     }
 }
