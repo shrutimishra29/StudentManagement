@@ -96,7 +96,7 @@ public class StudentController {
     @RequestMapping("graph")
     public String graph(Model m){
         List<Student> students = studentRepo.findAll();
-//        List<String> months = new ArrayList<>();
+        List<String> months = new ArrayList<>();
         List<String> courses = new ArrayList<>();
         courses.add("Java");
         courses.add("Angular");
@@ -138,6 +138,19 @@ public class StudentController {
         List<Integer> numList = numbers.stream().collect(Collectors.toList());
         m.addAttribute("courses", courseList);
         m.addAttribute("count", numList);
+
+
+        for( int i=0 ;i<students.size();i++){
+            months.add(students.get(i).getAddmissiondate().substring(5,7));
+        }
+        List<String> monthList = months.stream().collect(Collectors.toList());
+
+        System.out.println(months);
         return "graph";
+    }
+
+    @RequestMapping("/backToHome")
+    public String success(){
+        return "success";
     }
 }

@@ -74,7 +74,13 @@ th, td {
 tr:nth-child(even) {
   background-color: #f2f2f2
 }
+font {
+	color: #75C0E0;
+}
+.header{
+font-family: 'Autour One';font-size: 22px;
 
+}
 </style>
 
 <head>
@@ -88,7 +94,7 @@ tr:nth-child(even) {
           href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
           crossorigin="anonymous">
-
+    <link href='https://fonts.googleapis.com/css?family=Autour One' rel='stylesheet'>
     <title>
 
         </title>
@@ -96,19 +102,25 @@ tr:nth-child(even) {
 
 <body>
 <div>
-    <nav class="navbar bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/"> <img
-                    src="https://th.bing.com/th/id/OIP.veoLa35WqhsKceD7ToxhLAAAAA?pid=ImgDet&rs=1"
-                    alt="Logo" width="30" height="24"
-                    class="d-inline-block align-text-top"> <!-- <h1>
+    <div>
+        <nav class="navbar" style="background-color: #e3f2fd;">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/">  <!-- <h1>
                     Student Management App
-
-                </h1> --> <font face="Verdana" size="6">&nbsp;
-                Student Management</font><br /> <!-- </a> -->
-            </a>
-        </div>
-    </nav>
+                </h1> --> <div class="header">
+                    <img
+                            src="https://th.bing.com/th/id/OIP.veoLa35WqhsKceD7ToxhLAAAAA?pid=ImgDet&rs=1"
+                            alt="Logo" width="30" height="24"
+                            class="d-inline-block align-text-top">
+                    <font style="color:CornflowerBlue">
+                        Student Management
+                    </font>
+                </div><br /> <!-- </a> -->
+                </a>
+            </div>
+        </nav>
+        </nav>
+    </div>
 </div>
 
 <ul class="nav justify-content-end">
@@ -131,6 +143,11 @@ tr:nth-child(even) {
                     <img
                             src="https://uxwing.com/wp-content/themes/uxwing/download/user-interface/search-icon.png" alt="Logo"
                             width="30" height="24" class="d-inline-block align-text-top"/>
+                    <a href="/graph">
+                    <img
+                            src="https://www.iconpacks.net/icons/1/free-chart-icon-646-thumb.png" alt="Logo"
+                            width="30" height="24" class="d-inline-block align-text-top"/>
+                    </a>
                 </div>
                 <table id="myTable">
                     <tr class="header">
@@ -146,7 +163,7 @@ tr:nth-child(even) {
                         <th onclick="sortTable(3)">Email</th>
                         <th onclick="sortTable(4)">Phone</th>
                         <th onclick="sortTable(5)">Course</th>
-                        <th>Action</th>
+                        <th>&nbsp;Action</th>
                     </tr>
                     <tr th:each = "student: ${students}">
                         <td th:text = "${student.id}"></td>

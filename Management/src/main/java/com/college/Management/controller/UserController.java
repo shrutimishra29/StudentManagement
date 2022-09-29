@@ -5,6 +5,7 @@ import com.college.Management.services.UserDbService;
 import org.omg.CORBA.SystemException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpServletRequest;
@@ -42,13 +43,14 @@ public class UserController {
     }
 
     @RequestMapping(path = "/processform")
-    public String newUser(HttpServletRequest request) {
+    public String newUser(HttpServletRequest request, Model m) {
         String email = request.getParameter("email");
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         Users user = new Users(username,email,password);
         System.out.println(user.getUsername() + user.getEmail() + user.getPassword());
         dbService.create(user);
+        m.addAttribute("username",username);
         return "success";
     }
 

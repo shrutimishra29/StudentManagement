@@ -21,6 +21,14 @@ html, body {
 font {
 	color: #75C0E0;
 }
+font {
+	color: #75C0E0;
+}
+.header{
+font-family: 'Autour One';font-size: 22px;
+
+}
+
 </style>
 
 <head>
@@ -35,30 +43,36 @@ font {
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
           crossorigin="anonymous">
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css'>
+    <link href='https://fonts.googleapis.com/css?family=Autour One' rel='stylesheet'>
     <title>Login</title>
 </head>
 
 <body>
 <div>
-    <nav class="navbar bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#"> <img
-                    src="https://th.bing.com/th/id/OIP.veoLa35WqhsKceD7ToxhLAAAAA?pid=ImgDet&rs=1"
-                    alt="Logo" width="30" height="24"
-                    class="d-inline-block align-text-top"> <!-- <h1>
+    <nav class="navbar" style="background-color: #e3f2fd;">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/">  <!-- <h1>
                     Student Management App
-                </h1> --> <font face="Verdana" size="6">&nbsp;
-                Student Management</font><br /> <!-- </a> -->
-            </a>
-        </div>
-    </nav>
+                </h1> --> <div class="header">
+                    <img
+                            src="https://th.bing.com/th/id/OIP.veoLa35WqhsKceD7ToxhLAAAAA?pid=ImgDet&rs=1"
+                            alt="Logo" width="30" height="24"
+                            class="d-inline-block align-text-top">
+                    <font style="color:CornflowerBlue">
+                        Student Management
+                    </font>
+                </div><br /> <!-- </a> -->
+                </a>
+            </div>
+        </nav>
 </div>
 
 <ul class="nav justify-content-end">
-    <li class="nav-item"><a class="nav-link active"
-                            aria-current="page" href="#">Login</a></li>
-    <li class="nav-item"><a class="nav-link" href="#">About us</a></li>
-    <li class="nav-item"><a class="nav-link" href="#">Help</a></li>
+<!--    <li class="nav-item"><a class="nav-link active"-->
+<!--                            aria-current="page" href="/register">Register</a></li>-->
+    <li class="nav-item"><a class="nav-link" href="/about">About us</a></li>
+    <li class="nav-item"><a class="nav-link" href="/help">Help</a></li>
+    <li class="nav-item"><a class="nav-link" href="/contact">Contact Us</a></li>
 </ul>
 <!--<div class="bgimg">-->
 <!--    <div class="container mt-5"-->
